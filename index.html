@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Devfinder</title>
+	</head>
+	<body>
+		<div class="errorDiv">
+			<p>Usuario não encontrado</p>
+			<i
+				data-js="closeWarning"
+				class="fa fa-times"
+				aria-hidden="true"
+			></i>
+		</div>
+		<div class="container">
+			<header class="header">
+				<h1>devfinder</h1>
+				<div class="byDiv">
+					<p>By:</p>
+					<a href="https://github.com/l-Wendell" target="_blank"
+						><i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				</div>
+			</header>
+			<div class="searchDiv">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<input
+					data-js="searchInput"
+					type="text"
+					placeholder="Search GitHub username..."
+				/>
+				<button data-js="searchButton">Search</button>
+			</div>
+			<div class="infosProfileDiv">
+				<div class="userDescription">
+					<div class="userInfoDiV">
+						<img
+							data-js="imgProfile"
+							src="https://avatars.githubusercontent.com/u/89931655?v=4"
+							alt=""
+						/>
+						<div class="nameUserDiv">
+							<h2 data-js="nameUser"></h2>
+							<p data-js="user" class="user"></p>
+							<p class="dateCreation" data-js="dateCreation"></p>
+						</div>
+					</div>
+					<p class="bio" data-js="bio"></p>
+				</div>
+
+				<div class="numbersProfile">
+					<div class="itens">
+						<div class="repos">
+							<p class="title">Repos</p>
+							<p data-js="reposQuantity" class="lastChild"></p>
+						</div>
+						<div class="followers">
+							<p class="title">Seguidores</p>
+							<p
+								data-js="followersQuantity"
+								class="lastChild"
+							></p>
+						</div>
+						<div class="following">
+							<p class="title">Seguindo</p>
+							<p
+								data-js="followingQuantity"
+								class="lastChild"
+							></p>
+						</div>
+					</div>
+				</div>
+				<div class="infos">
+					<div class="primaryInfos">
+						<ul class="primaryInfosUl">
+							<li>
+								<i
+									class="fa fa-map-marker"
+									aria-hidden="true"
+								></i>
+
+								<a data-js="locality" href="#"></a>
+							</li>
+							<li>
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+								<a data-js="twitter" href=""></a>
+							</li>
+						</ul>
+						<ul class="secondInfosUl">
+							<li>
+								<i class="fa fa-link" aria-hidden="true"></i>
+								<a target="_blank" data-js="blog" href=""></a>
+							</li>
+							<li>
+								<i
+									class="fa fa-building-o"
+									aria-hidden="true"
+								></i>
+								<a data-js="company" href=""></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./app.js" type="module"></script>
+	</body>
+</html>
