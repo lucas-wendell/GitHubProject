@@ -6,13 +6,17 @@ export class ControllerClass {
 		this.service = new ServiceClass();
 		this.view = new UpdatedView(this);
 	}
-	getUserController(user) {
-		this.service.getUser(user, this.view);
+	attViewController(data) {
+		this.view.attView(data);
+	}
+	async getUserController(user) {
+		const processedData = await this.service.getUser(user);
+		this.attViewController(processedData);
 	}
 	controllerConvertDate(item, date) {
-		this.service.convertDate(item, date);
+		this.service.DataProcessing.convertDate(item, date);
 	}
 	controllerValidItem(item, data) {
-		this.service.validItem(item, data);
+		this.service.DataProcessing.validItem(item, data);
 	}
 }
