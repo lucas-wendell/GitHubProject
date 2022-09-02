@@ -1,8 +1,5 @@
 export class UpdatedView {
-	constructor(controller) {
-		this.controller = controller;
-	}
-	attView(data) {
+	attView(data, convertDateCallback, validItemCallback) {
 		const {
 			created_at,
 			public_repos,
@@ -21,9 +18,7 @@ export class UpdatedView {
 		const $nameUser = document.querySelector('[data-js="nameUser"]');
 		const $user = document.querySelector('[data-js="user"]');
 
-		const $dateCreation = document.querySelector(
-			'[data-js="dateCreation"]'
-		);
+		const $dateCreation = document.querySelector('[data-js="dateCreation"]');
 		const $bio = document.querySelector('[data-js="bio"]');
 
 		const $locality = document.querySelector('[data-js="locality"]');
@@ -32,9 +27,7 @@ export class UpdatedView {
 		const $blog = document.querySelector('[data-js="blog"]');
 		const $company = document.querySelector('[data-js="company"]');
 
-		const $reposQuantity = document.querySelector(
-			'[data-js="reposQuantity"]'
-		);
+		const $reposQuantity = document.querySelector('[data-js="reposQuantity"]');
 		const $followersQuantity = document.querySelector(
 			'[data-js="followersQuantity"]'
 		);
@@ -42,7 +35,7 @@ export class UpdatedView {
 			'[data-js="followingQuantity"]'
 		);
 
-		this.controller.controllerConvertDate($dateCreation, created_at);
+		convertDateCallback($dateCreation, created_at);
 		$reposQuantity.textContent = public_repos;
 
 		$followersQuantity.textContent = followers;
@@ -54,10 +47,10 @@ export class UpdatedView {
 		$nameUser.textContent = name;
 		$bio.textContent = bio;
 
-		this.controller.controllerValidItem($locality, location);
-		this.controller.controllerValidItem($twitter, twitter_username);
+		validItemCallback($locality, location);
+		validItemCallback($twitter, twitter_username);
 
-		this.controller.controllerValidItem($blog, blog);
-		this.controller.controllerValidItem($company, company);
+		validItemCallback($blog, blog);
+		validItemCallback($company, company);
 	}
 }

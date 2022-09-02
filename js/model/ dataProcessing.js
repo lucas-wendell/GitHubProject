@@ -1,5 +1,5 @@
 export class DataProcessing {
-	tratarItem($item, data) {
+	treatLink($item, data) {
 		const str = data?.substr(0, 8);
 
 		if (str === "https://") {
@@ -49,11 +49,11 @@ export class DataProcessing {
 			const text = "Não Encontrado";
 			$item.textContent = text;
 			if ($item.getAttribute("data-js") === "blog") {
-				this.tratarItem($item, text);
+				this.treatLink($item, text);
 			}
 		} else {
 			if ($item.getAttribute("data-js") === "blog") {
-				this.tratarItem($item, data);
+				this.treatLink($item, data);
 			}
 			$item.textContent = this.sliceString(data, $item);
 		}

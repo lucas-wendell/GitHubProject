@@ -8,10 +8,8 @@ export class ServiceClass {
 
 	async getUser(user) {
 		try {
-			const users = await fetch(`https://api.github.com/users/${user}`);
-			const data = await users.json();
-
-			return data;
+			const response = await fetch(`https://api.github.com/users/${user}`);
+			return response.json();
 		} catch (error) {
 			this.paragraphErrorDiv.textContent = error.message;
 			this.errorDiv.style.transform = "translateY(0%)";

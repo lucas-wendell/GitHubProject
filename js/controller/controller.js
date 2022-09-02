@@ -1,22 +1,20 @@
-import { ServiceClass } from "../model/model.js";
-import { UpdatedView } from "../view/view.js";
-
 export class ControllerClass {
-	constructor() {
-		this.service = new ServiceClass();
-		this.view = new UpdatedView(this);
+	constructor(service, view) {
+		this.service = service;
+		this.view = view;
 	}
-	attViewController(data) {
-		this.view.attView(data);
+
+	async attView(response) {
+		const data = await response;
+
+		const convertDate = ($item, date) =>
+			this.service.DataProcessing.convertDate($item, date);
+		const validItem = ($item, data) =>
+			this.service.DataProcessing.validItem($item, data);
+		this.view.attView(data, convertDate, validItem);
 	}
-	async getUserController(user) {
-		const processedData = await this.service.getUser(user);
-		this.attViewController(processedData);
-	}
-	controllerConvertDate(item, date) {
-		this.service.DataProcessing.convertDate(item, date);
-	}
-	controllerValidItem(item, data) {
-		this.service.DataProcessing.validItem(item, data);
+
+	searchUser(user) {
+		this.attView(this.service.getUser(user));
 	}
 }
