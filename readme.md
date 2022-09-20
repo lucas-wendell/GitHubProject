@@ -8,7 +8,7 @@ Com o projeto consegui melhorar minha lógica de programação e alguns conceito
 
 **Desafios do projeto**
 
-Esse projeto foi algo que realmente me desafiou, e uma das maiores dificuldades foi emplementar o padrão de projeto _MVC_ seguindo corretamente seus prícipios. Outro desafio que tive foi programar utilizando o paradigma de programação _POO_ **(programação orientada a objetos)**.
+Esse projeto foi algo que realmente me desafiou, e uma das maiores dificuldades foi implementar o padrão de projeto _MVC_ seguindo corretamente seus prícipios. Outro desafio que tive foi programar utilizando o paradigma de programação _POO_ **(programação orientada a objetos)**.
 
 ## **Tecnologias usadas:**
 
