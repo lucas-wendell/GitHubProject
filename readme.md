@@ -17,4 +17,4 @@ Esse projeto foi algo que realmente me desafiou, e uma das maiores dificuldades 
     - Javascript
     - API
 
-### **[Clique aqui e teste o projeto](https://l-wendell.github.io/GitHubProject/)**
+### **[Clique aqui e teste o projeto](https://lucas-wendell.github.io/GitHubProject/)**
